@@ -1,0 +1,149 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@font-face {
+    font-family: 'Outfit';
+    src: local('Outfit'), url("https://fonts.googleapis.com/css?family=Outfit") format('opentype');
+    font-weight: 700;
+}
+$primary: #106580;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+.btn-primary {
+    background-color: $primary;
+}
+img {
+    width: 100%;
+}
+i img {
+    width: 21px;
+}
+.app {
+    color: #fff;
+    font-family: 'Outfit';
+    .fluid_bg {
+        background-color: #000;
+    }
+    & .bg-wrap {
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0.5) 67%, rgba(0,0,0,1) 100%), url('../assets/kimetsu_banner.jpg') no-repeat center top;
+        padding: 0;
+    }
+    .nvbar {
+        a {
+            color: #fff!important;
+            &:hover {
+                opacity: 0.7;
+            }
+            .btn {
+                color: #fff;
+            }
+        }
+
+    }
+    .banner {
+        h2 {
+            font-size: 5em;
+            @include media-breakpoint-down(md) {
+                font-size: 40px;
+            }
+        }
+        .row > * {
+            padding-right: 0;
+        }
+        .cont.row {
+            padding: 300px 0;
+            @include media-breakpoint-down(md) {
+                padding: unset;
+            }
+
+        }
+        .tabs {
+            padding-bottom: 50px;
+            .active a,
+            a:hover {
+                font-weight: 700;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background-color: $primary;
+                    bottom: -5px;
+                    left: 0;
+                }
+
+            }
+            a {
+                color: #fff;
+                font-weight: 100;
+                text-decoration: none;
+            }
+        }
+    }
+    .bg-trend {
+        background-color: #262626;
+        color: #fff;
+        .trending {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            h2 {
+                font-size: 34px;
+                padding-bottom: 1em;
+                span {
+                    color: #FBC94A;
+                }
+            }
+            .card {
+                cursor: pointer;
+                background-color: #262626;
+                border-radius: 21px;
+                padding: 10em 1em 1em;
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    color: #747474;
+                }
+            }
+        }
+        .card-anime-selected {
+            background-repeat: no-repeat!important;
+            background-position: center!important;
+            background-size: cover!important;
+            border-radius: 21px;
+            padding: 30em 3em 3em;
+            margin-bottom: 2em;
+            p {
+                margin: 0;
+                font-size: 12px;
+                color: #747474;
+            }
+        }
+        .anime-card {
+          margin-bottom: 3em;
+          img {
+            border-radius: 20px;
+            @include media-breakpoint-down(md) {
+              margin-bottom: 3em;
+            }
+          }
+        }
+    }
+    .throwback {
+        padding-top: 50px;
+        img {
+            border-radius: 30px;
+        }
+    }
+
+}
